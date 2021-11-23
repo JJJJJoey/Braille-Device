@@ -1,0 +1,285 @@
+#importing python modules
+import RPi.GPIO as GPIO
+import time as time 
+#importing the adafruit library
+from adafruit_servokit import ServoKit
+kit = ServoKit (channels=16)
+#creating the on and off functions for the six servos
+def s_1_ON():
+	kit.servo[1].angle=91
+def s_1_OFF():
+	kit.servo[1].angle=86
+	
+def s_2_ON() :
+    kit.servo[2].angle=108
+def s_2_OFF():
+	kit.servo[2].angle=90
+	
+def s_3_ON() :
+    kit.servo[3].angle=90
+def s_3_OFF():
+	kit.servo[3].angle=80
+	
+def s_4_ON() :
+    kit.servo[4].angle=86
+def servo_4_OFF():
+	kit.servo[4].angle=93
+	
+def s_5_ON() :
+    kit.servo[5].angle=82
+def s_5_OFF():
+	kit.servo[5].angle=90
+
+def s_6_ON() :
+    kit.servo[6].angle=90
+def s_6_OFF():
+kit.servo[6].angle=98
+	
+def s_all_OFF():
+    kit.servo[1].angle=87
+    kit.servo[2].angle=90
+    kit.servo[3].angle=80
+    kit.servo[4].angle=93
+    kit.servo[5].angle=90
+    kit.servo[6].angle=98
+    
+#creating the function for each letter	
+def ltr_A():
+        servo_1_ON()
+        
+        
+def ltr _B():
+    s_1_ON()
+    s_2_ON()
+    
+    
+def ltr _C():
+    s_1_ON()
+    s_4_ON()
+    
+def ltr _D():
+    s_1_ON()
+    s_4_ON()
+    s_5_ON()
+    
+def ltr _E():
+    s_1_ON()
+    s_5_ON()
+    
+def ltr _F():
+    s_1_ON()
+    s_2_ON()
+    s_4_ON()
+    
+def ltr _G():
+    s_1_ON()
+    s_2_ON()
+    s_4_ON()
+    s_5_ON()
+    
+def ltr _H():
+    s_1_ON()
+    s_2_ON()
+    s_5_ON()
+    
+def ltr _I():
+    s_2_ON()
+    servo_4_ON()
+    
+def ltr _J():
+    s_2_ON()
+    s_4_ON()
+    s_5_ON()
+    
+        
+def ltr _K():
+    s_1_ON()
+    s_3_ON()
+    
+def ltr _L():
+    s_1_ON()
+    s_2_ON()
+    s_3_ON()
+    
+def ltr _M():
+    s_1_ON()
+    s_3_ON()
+    s_4_ON()
+    
+def ltr _N():
+    s_1_ON()
+    s_3_ON()
+    servo_4_ON()
+    servo_5_ON()
+    
+def ltr _O():
+    s_1_ON()
+    s_3_ON()
+    s_5_ON()
+    
+def ltr _P():
+    s_1_ON()
+    s_2_ON()
+    s_3_ON()
+    s_4_ON()
+    
+def ltr _Q():
+    s_1_ON()
+    s_2_ON()
+    s_3_ON()
+    s_4_ON()
+    s_5_ON()
+    
+def ltr _R():
+    s_1_ON()
+    s_2_ON()
+    s_3_ON()
+    s_5_ON()
+    
+def ltr _S():
+    s_2_ON()
+    s_3_ON()
+    s_4_ON()
+    
+def ltr _T():
+    s_2_ON()
+    s_3_ON()
+    s_4_ON()
+    s_5_ON()
+    
+def ltr _U():
+    s_1_ON()
+    s_3_ON()
+    s_6_ON()
+    
+def ltr _V():
+    s_1_ON()
+    s_2_ON()
+    s_3_ON()
+    s_6_ON()
+    
+def ltr _W():
+    s_2_ON()
+    s_4_ON()
+    s_5_ON()
+    s_6_ON()
+    
+def ltr _X():
+    s_1_ON()
+    s_3_ON()
+    s_4_ON()
+    s_6_ON()
+    
+def ltr _Y():
+    s_1_ON()
+    s_3_ON()
+    s_4_ON()
+    s_5_ON()
+    s_6_ON()
+    
+def ltr _Z():
+    s_1_ON()
+    s_3_ON()
+    s_5_ON()
+    s_6_ON()
+    
+#opening the text file
+file = open('nospaces.txt', 'r')
+#the while loop will run until the text ends
+while 1:
+#reading one character at a time
+    char = file.read(1)		
+    if char == "A":
+        ltr _A()
+        print (char)
+    elif char == "B":
+        ltr _B()
+        print (char)
+    elif char == "C":
+        ltr _C()
+        print (char)
+    elif char == "D":
+        ltr _D()
+        print (char)
+    elif char == "E":
+        ltr _E()
+        print (char)
+    elif char == "F":
+        ltr _F()
+        print (char)
+    elif char == "G":
+        ltr _G()
+        print (char)
+    elif char == "H":
+        ltr _H()
+        print (char)
+    elif char == "I":
+        ltr _I()
+        print (char)
+    elif char == "J":
+        ltr _J()
+        print (char)
+    elif char == "K":
+        ltr _K()
+        print (char)
+    elif char == "L":
+        ltr _L()
+        print (char)
+    elif char == "M":
+        ltr _M()
+        print (char)
+    elif char == "N":
+        ltr _N()
+        print (char)
+    elif char == "O":
+        ltr _O()
+        print (char)
+    elif char == "P":
+        ltr _P()
+        print (char)
+    elif char == "Q":
+        ltr _Q()
+        print (char)
+    elif char == "R":
+        ltr _R()
+        print (char)
+    elif char == "S":
+        ltr _S()
+        print (char)
+    elif char == "T":
+        ltr _T()
+        print (char)
+    elif char == "U":
+        ltr _U()
+        print (char)
+    elif char == "V":
+        ltr _V()
+        print (char)
+    elif char == "W":
+        ltr _W()
+        print (char)
+    elif char == "X":
+        ltr _X()
+        print (char)
+    elif char == "Y":
+        ltr _Y()
+        print (char)
+    elif char == "Z":
+        ltr _Z()
+        print (char)
+   		
+    if not char:
+		
+        break
+
+#time.sleep function to hold the servos up for some time
+    time.sleep(1)
+#reset all the servos
+    servo_all_OFF()
+#leaving some time before the next letter is read
+time.sleep(1)
+#after finishing the while loop the text file closes
+
+file.close()
+
+
